@@ -1,0 +1,92 @@
+
+@keyframes firework {
+    0% {
+        transform: translate(0%,40vh);
+        width:0.5vmin;
+        opacity: 1;
+    }
+    50%{
+        width:0.5vmin;
+        opacity: 1;
+    }
+    100%{
+        width:45vmin;
+        opacity:0;
+    }
+}
+
+.firework,
+.firework::before,
+.firework::after{
+    --top:100vh;
+    content: "";
+    position: fixed;
+    top:30%;
+    left:75%;
+    transform: translate(-50%,-50%);
+    width:0.5vmin;
+
+    aspect-ratio: 1;
+    background: radial-gradient(circle, #ff0 0.2vmin, #0000) 50% 0%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 0% 50%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 50% 99%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 99% 50%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 80% 90%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 95% 90%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 10% 60%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 31% 80%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 80% 10%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 90% 23%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 45% 20%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 13% 24%;
+    background-size: 0.5vmin 0.5vmin;
+    animation: firework 2s infinite;
+
+
+}
+
+
+
+.firework,
+.firework::before,
+.firework::after{
+    background-repeat: no-repeat;
+}
+
+.firework::before{
+    transform: translate(-50%,-50%) rotate(25deg)!important;
+}
+.firework::after{
+    transform: translate(-50%,-50%) rotate(-37deg)!important;
+}
+
+
+
+.content{
+    /*padding: -80%;*/
+    z-index: 2;
+    position: relative;
+    color: aliceblue;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 2px 2px #ff0000,1px 1px #ff0000;
+    top:20%;
+    font-family: "Lucida Fax", serif;
+    font-size:70px;
+
+
+}
+.name {
+
+
+    padding: 5%;
+    position: relative;
+    color: aliceblue;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 2px 2px red, 1px 1px red;
+    top: 15%;
+    font-family: "Lucida Fax", serif;
+    font-size: 50px;
+}
+

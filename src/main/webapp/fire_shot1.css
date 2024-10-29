@@ -1,0 +1,61 @@
+
+@keyframes fire_shot1 {
+    0% {
+        transform: translate(0%,40vh);
+        width:0.5vmin;
+        opacity: 1;
+    }
+    50%{
+        width:0.5vmin;
+        opacity: 1;
+    }
+    100%{
+        width:45vmin;
+        opacity:0;
+    }
+}
+
+.fire_shot1,
+.fire_shot1::before,
+.fire_shot1::after{
+    --top:100vh;
+    content: "";
+    position: fixed;
+    top:40%;
+    left:85%;
+    transform: translate(-50%,-50%);
+    width:0.5vmin;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, #ff0000 0.2vmin, #0000) 50% 99%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 99% 50%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 50% 00%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 00% 50%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 90% 80%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 85% 90%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 60% 10%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 80% 31%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 10% 80%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 23% 90%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 20% 50%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 25% 14%;
+    background-size: 0.5vmin 0.5vmin;
+    animation-delay: 2s ;
+    animation: fire_shot1 2s infinite;
+
+
+}
+
+
+
+.fire_shot1,
+.fire_shot1::before,
+.fire_shot1::after{
+    background-repeat: no-repeat;
+}
+
+.fire_shot1::before{
+    transform: translate(-50%,-50%) rotate(25deg)!important;
+}
+.fire_shot1::after{
+    transform: translate(-50%,-50%) rotate(-37deg)!important;
+}

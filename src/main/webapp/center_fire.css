@@ -1,0 +1,75 @@
+
+@keyframes center_fire {
+    0% {
+        transform: translate(0%,40vh);
+        width:0.5vmin;
+        opacity: 1;
+    }
+    50%{
+        width:0.5vmin;
+        opacity: 1;
+    }
+    100%{
+        width:45vmin;
+        opacity:0;
+    }
+}
+
+.center_fire,
+.center_fire::before,
+.center_fire::after{
+    --top:100vh;
+    content: "";
+    position: fixed;
+    top:15%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:0.5vmin;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, #ff0000 0.2vmin, #0000) 50% 99%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 99% 50%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 50% 00%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 00% 50%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 90% 80%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 85% 90%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 60% 10%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 80% 31%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 10% 80%,
+    radial-gradient(circle, #ff0000 0.2vmin, #0000) 23% 90%,
+    radial-gradient(circle, #ff0000 0.3vmin, #0000) 20% 50%,
+    radial-gradient(circle, #ff0000 0.5vmin, #0000) 25% 14%,
+
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 14% 20%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 10% 05%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 05% 15%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 25% 39%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 28% 41%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 54% 66%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 62% 70%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 69% 76%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 79% 90%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 90% 99%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 99% 10%,
+    radial-gradient(circle, #ffea00 0.5vmin, #0000) 05% 90%;
+
+    background-size: 0.5vmin 0.5vmin;
+    animation-delay: 2s ;
+    animation: center_fire 2s infinite;
+
+
+}
+
+
+
+.center_fire,
+.center_fire::before,
+.center_fire::after{
+    background-repeat: no-repeat;
+}
+
+.center_fire::before{
+    transform: translate(-50%,-50%) rotate(25deg)!important;
+}
+.center_fire::after{
+    transform: translate(-50%,-50%) rotate(-37deg)!important;
+}

@@ -1,0 +1,61 @@
+
+@keyframes fire_part {
+    0% {
+        transform: translate(0%,40vh);
+        width:0.5vmin;
+        opacity: 1;
+    }
+    50%{
+        width:0.5vmin;
+        opacity: 1;
+    }
+    100%{
+        width:45vmin;
+        opacity:0;
+    }
+}
+
+.fire_part,
+.fire_part::before,
+.fire_part::after{
+    --top:100vh;
+    content: "";
+    position:fixed;
+    top:30%;
+    left:25%;
+    transform: translate(-50%,-50%);
+    width:5vmin;
+
+    aspect-ratio: 1;
+    background: radial-gradient(circle, #ff0 0.2vmin, #0000) 50% 99%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 99% 50%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 50% 00%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 00% 50%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 90% 80%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 85% 90%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 60% 10%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 80% 31%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 10% 80%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000) 23% 90%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000) 20% 50%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000) 25% 14%;
+    background-size: 0.5vmin 0.5vmin;
+    animation: fire_part 2s infinite;
+
+
+}
+
+
+
+.fire_part,
+.fire_part::before,
+.fire_part::after{
+    background-repeat: no-repeat;
+}
+
+.fire_part::before{
+    transform: translate(-50%,-50%) rotate(25deg)!important;
+}
+.fire_part::after{
+    transform: translate(-50%,-50%) rotate(-37deg)!important;
+}
